@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -55,6 +56,58 @@ namespace MathFormulas
             return result;
         }
 
+        static double ExerciseD()
+        {
+            double xVal = 2;
+            double yVal = 5;
+            Console.Write("Input the value of position 1: ");
+            int Pos1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the value of position 2: ");
+            int Pos2 = Convert.ToInt32(Console.ReadLine());
+
+            double sumX = (xVal * Pos1) - (xVal * Pos2);
+            double xPos = sumX * sumX;
+
+            double sumY = (yVal * Pos1) - (yVal * Pos2);
+            double yPos = sumY * sumY;
+
+            double distance = Math.Sqrt(xPos + yPos);
+
+            Console.WriteLine(distance);
+            return distance;
+
+        }
+
+        static int ExerciseE(int x, int y, int z)
+        {
+           
+            Console.Write("Input the value of P pos: ");
+            int pVal = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the value of Q pos: ");
+            int qVal = Convert.ToInt32(Console.ReadLine());
+
+            int pqX = (pVal * x) * (qVal * x);
+            int pqY = (pVal * y) * (qVal * y);
+            int pqZ = (pVal * z) * (pVal * z);
+
+            int innerProduct = pqX + pqY + pqZ;
+
+            Console.WriteLine($"the inner product of Pxyz and Qxyz is: {innerProduct}\n");
+            return innerProduct;
+
+        }
+
+        static void ExerciseF()
+        {
+          
+        }
+
+        static void ExerciseG()
+        {
+
+        }
+
+
         static void Main(string[] args)
         {
             Console.WriteLine(ExerciseA(7));
@@ -62,6 +115,11 @@ namespace MathFormulas
             ExerciseB();
 
             Console.WriteLine(ExerciseC(3, 5, 6));
+
+            ExerciseD();
+
+            ExerciseE(2, 3, 5);
+
             Console.ReadKey();
 
         }

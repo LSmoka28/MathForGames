@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathFormulas", "MathFormula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trigonometry", "Trigonometry\Trigonometry.csproj", "{4F79F940-3FE7-49AF-BF91-E21A639078CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointsAndVectors", "PointsAndVectors\PointsAndVectors.csproj", "{B76299BC-78FC-42B7-B84A-71CBA9320ABE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4F79F940-3FE7-49AF-BF91-E21A639078CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F79F940-3FE7-49AF-BF91-E21A639078CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F79F940-3FE7-49AF-BF91-E21A639078CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76299BC-78FC-42B7-B84A-71CBA9320ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76299BC-78FC-42B7-B84A-71CBA9320ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76299BC-78FC-42B7-B84A-71CBA9320ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76299BC-78FC-42B7-B84A-71CBA9320ABE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

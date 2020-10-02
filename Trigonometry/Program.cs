@@ -94,7 +94,7 @@ namespace Trigonometry
 
         static void FindAngles(double sideA, double sideB, double sideC)
         {
-            double angleA = (((sideB * sideB) + (sideC * sideC)) - (sideA * sideA)) / ((sideB * sideC) * 2);
+            double angleA = ((Math.Pow(sideB,2) + (sideC * sideC)) - (sideA * sideA)) / ((sideB * sideC) * 2);
             double angleB = (((sideA * sideA) + (sideC * sideC)) - (sideB * sideB)) / ((sideA * sideC) * 2);
             double angleC = (((sideA * sideA) + (sideB * sideB)) - (sideC * sideC)) / ((sideA * sideB) * 2);
 

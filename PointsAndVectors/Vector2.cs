@@ -60,5 +60,36 @@ namespace PointsAndVectors
         {
             return new Vector2(rhs.x / divideBy, rhs.y / divideBy);
         }
+        public float Magnitude()
+        {
+            return (float)Math.Sqrt(x * x + y * y);
+        }
+
+        public float MagnitudeSqr()
+        {
+            return (x * x + y * y);
+        }
+
+        public float Distance(Vector2 other)
+        {
+            float diffX = x - other.x;
+            float diffY = y - other.y;
+            
+            return (float)Math.Sqrt(diffX * diffX + diffY * diffY);
+        }
+
+        public float DistanceSqr(Vector2 other)
+        {
+            float diffX = x - other.x;
+            float diffY = y - other.y;
+            
+            return (diffX * diffX + diffY * diffY);
+        }
+        public void Normalize()
+        {
+            float m = Magnitude();
+            this.x /= m;
+            this.y /= m;            
+        }
     }
 }

@@ -51,13 +51,13 @@ namespace PointsAndVectors
             return new Vector3(rhs.x * multiplyBy, rhs.y * multiplyBy, rhs.z * multiplyBy);
         }
 
-        // defines op for diving the first Vector3 by a float number
+        // defines op for dividing the first Vector3 by a float number
         public static Vector3 operator /(Vector3 lhs, float divideBy)
         {
             return new Vector3(lhs.x / divideBy, lhs.y / divideBy, lhs.z / divideBy);
         }
 
-        // defines op for diving the second Vector3 by a float number
+        // defines op for dividing the second Vector3 by a float number
         public static Vector3 operator /(float divideBy, Vector3 rhs)
         {
             return new Vector3(rhs.x / divideBy, rhs.y / divideBy, rhs.z / divideBy);
@@ -94,5 +94,8 @@ namespace PointsAndVectors
             this.y /= m;
             this.z /= m;
         }
+
+
+
     }
 }

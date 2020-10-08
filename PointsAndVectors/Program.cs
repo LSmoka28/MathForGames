@@ -24,14 +24,16 @@ namespace PointsAndVectors
         {
             Vector2 tmpPlayer = new Vector2(-2, 5.5f);
             Vector2 tmpEnemy = new Vector2(9, -22);
-            Vector3 playerPos = new Vector3(0, 1, 2);
+            Vector3 playerPos = new Vector3(5, 4, 2);
             Vector3 enemyPos = new Vector3(9, -2, 7);
 
 
-            Console.WriteLine(playerPos.Distance(enemyPos));
-            
-            
+            Console.WriteLine(playerPos.Magnitude());
+            playerPos.Normalize();
+            Console.WriteLine(playerPos.x);
             Console.ReadKey();
+
+
 
         }
     }

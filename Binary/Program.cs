@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,14 +39,14 @@ namespace Binary
 
          5. Using Two's complement convert the following between decimal and binary (for binary use 1
             signed byte)
-            • 10000000           =  
-            • 10101010           =   
-            • 11110000           =  
-            • 11001100           =  
-            • -16                =  
-            • 128                =  
-            • -128               =  
-            • -123               =  
+            • 1000 0000           =   1000 0000 = -128
+            • 1010 1010           =   0101 0110 = -86                                           
+            • 1111 0000           =   0001 0000 = -16
+            • 1100 1100           =   0011 0100 = -52
+            • -16                 =   1001 0000 = 1111 0000
+            • 128                 =   1000 0000 = 0000 1000 0000
+            • -128                =   1000 1000 0000 = 1111 1000 0000
+            • -123                =   1000 0111 1011 = 1111 1000 0101
 
         6. What do each of these evaluate to?
             • 11111 | 11111      =  11111
@@ -72,7 +73,20 @@ namespace Binary
         // bool IsLeftMostBitSet(uint value)
         // • Returns true if the left most(the most significant) bit of value is set and
         //   false otherwise
+        static class BitUtils
+        {
+            public static bool IsLeftMostBitSet(uint value)
+            {
+                Console.WriteLine("INPUT DEBUG: " + Convert.ToString(value, toBase: 2).PadLeft(32, '0'));
+                return (value >> 31) == 1;
+            }
 
+            //public static bool IsRightMostBitSet(uint value)
+            //{
+            //    Console.WriteLine("INPUT DEBUG: " + Convert.ToString(value, toBase: 2).PadLeft(32, '0'));
+            //    return (value << 31) == 1;
+            //}
+        }
 
 
 
@@ -100,12 +114,23 @@ namespace Binary
         // void PrintBinary(unsigned byte value)
         // • Prints value to the console as a binary number
 
-        
+
 
         static void Main(string[] args)
         {
 
-            
+            Debug.Assert(BitUtils.IsLeftMostBitSet(uint.MaxValue));
+            Debug.Assert(!BitUtils.IsLeftMostBitSet(uint.MinValue));
+            Debug.Assert(BitUtils.IsLeftMostBitSet(0b10000000000000000000000000000000));
+            Debug.Assert(!BitUtils.IsLeftMostBitSet(0b00000000000000000000000000000000));
+            Debug.Assert(!BitUtils.IsLeftMostBitSet(0b00000000000000010000000000000000));
+
+            //Debug.Assert(BitUtils.IsRightMostBitSet(uint.MaxValue));
+            //Debug.Assert(!BitUtils.IsRightMostBitSet(uint.MinValue));
+            //Debug.Assert(BitUtils.IsRightMostBitSet(0b0000000000000000000000000000001));
+            //Debug.Assert(!BitUtils.IsRightMostBitSet(0b00000000000000000000000000000000));
+            //Debug.Assert(!BitUtils.IsRightMostBitSet(0b00000000000000010000000000000000));
+
 
 
             Console.Write("\n");
@@ -113,5 +138,10 @@ namespace Binary
 
 
         }
+
+
     }
+
+
+    
 }
